@@ -1,6 +1,11 @@
 
 public class House extends Building{
-//	A House is a building
+
+	private int total = 0;
+	
+	private int average;
+	
+	private int[] rooms;		
 	
 	/**
 	 * Number of bathrooms in building
@@ -19,21 +24,19 @@ public class House extends Building{
 	/**
 	 * Number of rooms and average size of room
 	 */
-	private int[] rooms;
 	
-	public void setRooms(int[] rooms) {
-		this.rooms = rooms;
+	private void setRooms(){
+		 String[] arrayw = new String[4]; //populate array
+		 getRooms(arrayw);
 	}
 
-	public int[] getRooms() {
+	public int[] getRooms(String[] a) {
 		return rooms;
 		
 	}
 
+	/********************************************************************************************************************************/
 
-	private int total = 0;
-	
-	private int average;
 	
 	public int getAverage() {
 		return average;
