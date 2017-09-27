@@ -22,7 +22,14 @@ public class Test {
 		
 		System.out.println(niceHouse.getNumBathrooms());
 		System.out.println(niceHouse.toString());
-
+		
+		/*
+		 * Below we're testing the Building Method
+		 */
+		
+		Building building = new Building();
+		building.sqFoot(560.0, 450.0);
+		System.out.println(building.sqFoot(560, 450));
 	}
 
 }

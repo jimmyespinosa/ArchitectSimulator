@@ -5,7 +5,7 @@ public class House extends Building{
 	
 	private int average;
 	
-	private int[] rooms;		
+	private int[] rooms;
 	
 	/**
 	 * Number of bathrooms in building

@@ -1,7 +1,5 @@
 
 public class Building {
-
-		public abstract class Blueprint {
 		
 	//	A building has a number of floors, and a number of windows.  
 		private int floors;
@@ -29,7 +27,24 @@ public class Building {
 		public void setLength(double length) {
 			this.length = length;
 		}
-	} 
+
+		public int getWindows() {
+			return windows;
+		}
+
+		public void setWindows(int windows) {
+			this.windows = windows;
+		}
+
+		public int getFloors() {
+			return floors;
+		}
+
+		public void setFloors(int floors) {
+			this.floors = floors;
+		}
+	}
+
 		
 		
 		
@@ -46,7 +61,7 @@ public class Building {
 //		myHome.getRooms();
 //		System.out.println(myHome.getRooms());
 //	}
-}
+
 	
 
 
