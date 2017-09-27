@@ -18,9 +18,10 @@ public class Test {
 		House niceHouse = new House();
 		
 		niceHouse.setNumBathrooms(12);
-		niceHouse.setRooms(20);
+		//niceHouse.setRooms(20);
 		
 		System.out.println(niceHouse.getNumBathrooms());
+		System.out.println(niceHouse.toString());
 
 	}
 

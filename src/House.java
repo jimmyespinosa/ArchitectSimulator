@@ -46,13 +46,7 @@ public class House extends Building{
 		this.average = average;
 	}
 	
-	
-	/**
-	 * 
-	 * 
-	 */
-	
-	public void avgRoomSize(int[] rooms) {
+	public int avgRoomSize(int[] rooms) {
 		
 		for (int i = 0; i < rooms.length; i++){
 			total =+ i;
@@ -60,6 +54,8 @@ public class House extends Building{
 		}
 		
 		setAverage(total / rooms.length);
+		
+		return getAverage();
 		
 	}
 
