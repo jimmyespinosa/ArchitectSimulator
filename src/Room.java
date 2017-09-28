@@ -16,10 +16,17 @@ public class Room extends House implements Comparable<Room>{
 	}
 	
 	@Override
-	public int compareTo(Room o) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(Object temp) {
+		Room other = (Room) temp; 
+		if (getNumOfClosets() > other.getNumOfClosets()){
+			return 1;
+		} else if (getNumOfClosets() < other.getNumOfClosets()){
+			return -1;
+		} else {
+			return 0;
+		}
 	}
+	 
 	
 
 	public double getRoomLength() {
