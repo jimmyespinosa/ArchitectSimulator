@@ -1,17 +1,17 @@
 
-public class House extends Building implements MLSInterface{
+public class House extends Building implements MLSInterface {
 
 	private int total = 0;
-	
+
 	private int average;
-	
+
 	private int[] rooms;
-	
+
 	/**
 	 * Number of bathrooms in building
 	 */
 	private int numBathrooms;
-	
+
 	public void setNumBathrooms(int numBathrooms) {
 		this.numBathrooms = numBathrooms;
 	}
@@ -19,25 +19,25 @@ public class House extends Building implements MLSInterface{
 	public int getNumBathrooms() {
 		return numBathrooms;
 	}
-/********************************************************************************************************************************/
-	
+
+	/********************************************************************************************************************************/
+
 	/**
 	 * Number of rooms and average size of room
 	 */
-	
-	private void setRooms(){
-		 String[] arrayw = new String[4]; //populate array
-		 getRooms(arrayw);
+
+	private void setRooms() {
+		String[] arrayw = new String[4]; // populate array
+		getRooms(arrayw);
 	}
 
 	public int[] getRooms(String[] a) {
 		return rooms;
-		
+
 	}
 
 	/********************************************************************************************************************************/
 
-	
 	public int getAverage() {
 		return average;
 	}
@@ -45,24 +45,25 @@ public class House extends Building implements MLSInterface{
 	public void setAverage(int average) {
 		this.average = average;
 	}
-	
+
 	public int avgRoomSize(int[] rooms) {
-		
-		for (int i = 0; i < rooms.length; i++){
-			total =+ i;
-			
+
+		for (int i = 0; i < rooms.length; i++) {
+			total = +i;
+
 		}
-		
+
 		setAverage(total / rooms.length);
-		
+
 		return getAverage();
-		
+
 	}
-	
+
 	/*
 	 * (non-Javadoc)
-	 * @see MLSInterface#getMLSListing()
-	 * Below we have the Implementation of the Interface
+	 * 
+	 * @see MLSInterface#getMLSListing() Below we have the Implementation of the
+	 * Interface
 	 */
 
 	@Override
@@ -71,7 +72,4 @@ public class House extends Building implements MLSInterface{
 		return forSale;
 	}
 
-
-	
-	
 }

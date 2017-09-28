@@ -1,33 +1,30 @@
 
-public class Room extends House implements Comparable<Room>{
-//	A room has a length, width, a floor covering, and a number of closets.
-	
+public class Room extends House implements Comparable {
+	// A room has a length, width, a floor covering, and a number of closets.
 
 	private double roomLength, roomWidth;
-	
+
 	private boolean hasFloorCovering;
-	
+
 	private int numOfClosets;
-	
-	public Room (double L, double W, int C){
+
+	public Room(double L, double W, int C) {
 		roomLength = L;
 		roomWidth = W;
 		numOfClosets = C;
 	}
+
 	
-	@Override
 	public int compareTo(Object temp) {
-		Room other = (Room) temp; 
-		if (getNumOfClosets() > other.getNumOfClosets()){
+		Room other = (Room) temp;
+		if (getNumOfClosets() > other.getNumOfClosets()) {
 			return 1;
-		} else if (getNumOfClosets() < other.getNumOfClosets()){
+		} else if (getNumOfClosets() < other.getNumOfClosets()) {
 			return -1;
 		} else {
 			return 0;
 		}
 	}
-	 
-	
 
 	public double getRoomLength() {
 		return roomLength;
@@ -60,19 +57,21 @@ public class Room extends House implements Comparable<Room>{
 	public void setNumOfClosets(int numOfClosets) {
 		this.numOfClosets = numOfClosets;
 	}
-	
-	
+
 	/**
 	 * Here we calculate the room dimensions.
-	 * @param x is room Length
-	 * @param y is room Width
+	 * 
+	 * @param x
+	 *            is room Length
+	 * @param y
+	 *            is room Width
 	 */
-	public void setRoomDimensions(int x, int y){
+	public void setRoomDimensions(int x, int y) {
 		roomLength = x;
 		roomWidth = y;
 	}
-	
-	public double getRoomDimensions(){
+
+	public double getRoomDimensions() {
 		return roomLength * roomWidth;
 	}
 }
