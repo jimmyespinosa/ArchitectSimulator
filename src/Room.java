@@ -1,5 +1,5 @@
 
-public class Room extends House{
+public class Room extends House implements Comparable<Room>{
 //	A room has a length, width, a floor covering, and a number of closets.
 	
 
@@ -8,6 +8,19 @@ public class Room extends House{
 	private boolean hasFloorCovering;
 	
 	private int numOfClosets;
+	
+	public Room (double L, double W, int C){
+		roomLength = L;
+		roomWidth = W;
+		numOfClosets = C;
+	}
+	
+	@Override
+	public int compareTo(Room o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
 
 	public double getRoomLength() {
 		return roomLength;
@@ -55,6 +68,4 @@ public class Room extends House{
 	public double getRoomDimensions(){
 		return roomLength * roomWidth;
 	}
-	
-	
 }

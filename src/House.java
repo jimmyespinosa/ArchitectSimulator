@@ -1,5 +1,5 @@
 
-public class House extends Building{
+public class House extends Building implements MLSInterface{
 
 	private int total = 0;
 	
@@ -57,6 +57,18 @@ public class House extends Building{
 		
 		return getAverage();
 		
+	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see MLSInterface#getMLSListing()
+	 * Below we have the Implementation of the Interface
+	 */
+
+	@Override
+	public String getMLSListing() {
+		String forSale = "This beautiful property has just been listed!";
+		return forSale;
 	}
 
 
